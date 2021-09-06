@@ -8,13 +8,97 @@
 import SwiftUI
 
 struct CarRow: View {
+    let car: Car
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            car.images.first!
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            
+            HStack {
+                Text("\(car.mark) \(car.model) \(String(car.year))")
+                Spacer()
+            }.padding(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5))
+            
+            HStack{
+                Text("\(car.price) $")
+                    .font(Font.system(size: 21))
+                    .fontWeight(.bold)
+                    .foregroundColor(.green)
+                Text("/ \(car.price * 28) uah")
+                Spacer()
+            }.padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
+            
+            HStack{
+                VStack(alignment: .leading){
+                    HStack{
+                        Image("Speed")
+                            .renderingMode(.template)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color.orange)
+                            .frame(width: 25, height: 25)
+                        
+                        Text(" \(car.road) тис. км")
+                    }
+                    
+                    HStack{
+                        Image("fuel")
+                            .renderingMode(.template)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color.orange)
+                            .frame(width: 25, height: 25)
+                        
+                        Text(car.fuel.rawValue)
+                        
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                Spacer()
+                
+                VStack(alignment: .leading){
+                    HStack{
+                        Image("placeholder")
+                            .renderingMode(.template)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color.orange)
+                            .frame(width: 25, height: 25)
+                        
+                        Text(" \(car.location)")
+                    }
+                    
+                    HStack{
+                        Image("manual-transmission")
+                            .renderingMode(.template)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color.orange)
+                            .frame(width: 25, height: 25)
+                        
+                        Text(car.transmission.rawValue)
+                        
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+                
+            }
+        }
     }
 }
 
 struct CarRow_Previews: PreviewProvider {
     static var previews: some View {
-        CarRow()
+        CarRow(car: Car(images: [Image("Mercedes-1")],
+                        mark: "Ford",
+                        model: "Mustang",
+                        year: 2021,
+                        price: 17000,
+                        fuel: .benzine,
+                        road: 9,
+                        location: "Kyiv",
+                        transmission: .auto,
+                        color: "White",
+                        numberOfOwners: 3))
     }
 }
