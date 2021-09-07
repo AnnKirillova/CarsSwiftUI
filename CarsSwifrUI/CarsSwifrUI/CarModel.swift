@@ -23,6 +23,10 @@ struct Car: Identifiable{
     let color: String
     let numberOfOwners: Int
     let isFavorite: Bool
+    
+    var icon: Image? {
+        return images.first
+    }
 }
 
 enum Fuel: String {

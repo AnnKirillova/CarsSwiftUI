@@ -11,9 +11,9 @@ struct ContentView: View {
     let cars: [Car] = ModeData.shared.cars
     
     var body: some View {
-        List{
-            ForEach(cars){ car in
-                NavigationLink(destination: Details(car: car)){
+        List {
+            ForEach(cars) { car in
+                NavigationLink(destination: Details(car: car)) {
                     CarRow(car: car)
                 }
             }

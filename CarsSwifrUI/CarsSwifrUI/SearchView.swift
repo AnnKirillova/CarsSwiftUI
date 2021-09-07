@@ -28,7 +28,13 @@ struct SearchView: View {
             NavigationLink(
                 destination: ContentView(),
                 label: {
-                    Text("Search")
+                    Text("Search SwiftUI")
+                })
+                .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
+            NavigationLink(
+                destination: ContentView(),
+                label: {
+                    Text("Search UIKit")
                 })
                 .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
         }

@@ -2,18 +2,7 @@
   "images" : [
     {
       "filename" : "creta-Car-PNG-Image.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "creta-Car-PNG-Image-1.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "creta-Car-PNG-Image-2.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
