@@ -25,18 +25,20 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView{
-            NavigationLink(
-                destination: ContentView(),
-                label: {
-                    Text("Search SwiftUI")
-                })
-                .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
-            NavigationLink(
-                destination: ContentView(),
-                label: {
-                    Text("Search UIKit")
-                })
-                .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
+            VStack{
+                NavigationLink(
+                    destination: ContentView(),
+                    label: {
+                        Text("Search SwiftUI")
+                    })
+                    .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
+                NavigationLink(
+                    destination: UIKitDetails(),
+                    label: {
+                        Text("Search UIKit")
+                    })
+                    .navigationBarTitle(Text("SEARCH"), displayMode: .inline)
+            }
         }
     }
 }

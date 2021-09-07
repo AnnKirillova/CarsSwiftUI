@@ -11,7 +11,7 @@ struct Details: View {
     var car: Car
     var body: some View {
         VStack {
-            car.images.first?
+            Image(car.icon!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

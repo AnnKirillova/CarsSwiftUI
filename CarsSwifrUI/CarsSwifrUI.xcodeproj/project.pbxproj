@@ -16,7 +16,10 @@
 		95169F6F26E65D98005B3239 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95169F6E26E65D97005B3239 /* SearchView.swift */; };
 		95169F7126E664B2005B3239 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95169F7026E664B2005B3239 /* Details.swift */; };
 		95169F7326E66F43005B3239 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95169F7226E66F43005B3239 /* ModelData.swift */; };
-		95169F7526E677B9005B3239 /* FavoriteBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95169F7426E677B9005B3239 /* FavoriteBTN.swift */; };
+		9590EECF26E78D61009627BE /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590EECD26E78D61009627BE /* CarViewController.swift */; };
+		9590EED026E78D61009627BE /* CarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9590EECE26E78D61009627BE /* CarViewController.xib */; };
+		9590EED326E78DE5009627BE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590EED126E78DE5009627BE /* TableViewCell.swift */; };
+		9590EED426E78DE5009627BE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9590EED226E78DE5009627BE /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		95169F6E26E65D97005B3239 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		95169F7026E664B2005B3239 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		95169F7226E66F43005B3239 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		95169F7426E677B9005B3239 /* FavoriteBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBTN.swift; sourceTree = "<group>"; };
+		9590EECD26E78D61009627BE /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		9590EECE26E78D61009627BE /* CarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarViewController.xib; sourceTree = "<group>"; };
+		9590EED126E78DE5009627BE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9590EED226E78DE5009627BE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				95169F5B26E63E90005B3239 /* CarsSwifrUIApp.swift */,
-				95169F5D26E63E90005B3239 /* ContentView.swift */,
-				95169F6E26E65D97005B3239 /* SearchView.swift */,
-				95169F7026E664B2005B3239 /* Details.swift */,
-				95169F7426E677B9005B3239 /* FavoriteBTN.swift */,
-				95169F6A26E64210005B3239 /* CarRow.swift */,
-				95169F5F26E63E95005B3239 /* Assets.xcassets */,
+				9590EED826E794A5009627BE /* UIKit */,
+				9590EED726E7949D009627BE /* SwiftUI */,
+				9590EED626E78E2A009627BE /* Models */,
 				95169F6426E63E95005B3239 /* Info.plist */,
 				95169F6126E63E95005B3239 /* Preview Content */,
-				95169F6C26E650B9005B3239 /* CarModel.swift */,
-				95169F7226E66F43005B3239 /* ModelData.swift */,
 			);
 			path = CarsSwifrUI;
 			sourceTree = "<group>";
@@ -82,9 +83,49 @@
 		95169F6126E63E95005B3239 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				95169F5F26E63E95005B3239 /* Assets.xcassets */,
 				95169F6226E63E95005B3239 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9590EED526E78DF6009627BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95169F7026E664B2005B3239 /* Details.swift */,
+				95169F5D26E63E90005B3239 /* ContentView.swift */,
+				95169F6A26E64210005B3239 /* CarRow.swift */,
+				95169F6E26E65D97005B3239 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9590EED626E78E2A009627BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95169F7226E66F43005B3239 /* ModelData.swift */,
+				95169F6C26E650B9005B3239 /* CarModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9590EED726E7949D009627BE /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				9590EED526E78DF6009627BE /* Views */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		9590EED826E794A5009627BE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9590EECD26E78D61009627BE /* CarViewController.swift */,
+				9590EECE26E78D61009627BE /* CarViewController.xib */,
+				9590EED126E78DE5009627BE /* TableViewCell.swift */,
+				9590EED226E78DE5009627BE /* TableViewCell.xib */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95169F6326E63E95005B3239 /* Preview Assets.xcassets in Resources */,
+				9590EED426E78DE5009627BE /* TableViewCell.xib in Resources */,
+				9590EED026E78D61009627BE /* CarViewController.xib in Resources */,
 				95169F6026E63E95005B3239 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,10 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95169F7526E677B9005B3239 /* FavoriteBTN.swift in Sources */,
+				9590EECF26E78D61009627BE /* CarViewController.swift in Sources */,
 				95169F6F26E65D98005B3239 /* SearchView.swift in Sources */,
 				95169F6D26E650B9005B3239 /* CarModel.swift in Sources */,
 				95169F7126E664B2005B3239 /* Details.swift in Sources */,
+				9590EED326E78DE5009627BE /* TableViewCell.swift in Sources */,
 				95169F6B26E64210005B3239 /* CarRow.swift in Sources */,
 				95169F5E26E63E90005B3239 /* ContentView.swift in Sources */,
 				95169F5C26E63E90005B3239 /* CarsSwifrUIApp.swift in Sources */,

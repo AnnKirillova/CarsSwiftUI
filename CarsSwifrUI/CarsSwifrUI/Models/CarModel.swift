@@ -11,7 +11,7 @@ import SwiftUI
 struct Car: Identifiable{
     var id: String = UUID().uuidString
     
-    let images: [Image]
+    let images: [String]
     let mark: String
     let model: String
     let year: Int
@@ -24,7 +24,7 @@ struct Car: Identifiable{
     let numberOfOwners: Int
     let isFavorite: Bool
     
-    var icon: Image? {
+    var icon: String? {
         return images.first
     }
 }

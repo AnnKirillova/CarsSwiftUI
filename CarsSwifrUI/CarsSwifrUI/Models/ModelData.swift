@@ -12,7 +12,7 @@ class ModeData{
     static let shared = ModeData()
     private init() {}
     
-    let cars: [Car] = [Car(images: [Image("Mercedes-1")],
+    let cars: [Car] = [Car(images: ["Mercedes-1"],
                            mark: "Mercedes-Benz",
                            model: "S 400 AMB",
                            year: 2021,
@@ -24,7 +24,7 @@ class ModeData{
                            color: "White",
                            numberOfOwners: 3,
                            isFavorite: true),
-                       Car(images: [Image("creta")],
+                       Car(images: ["creta"],
                            mark: "Hyndai",
                            model: "Creta",
                            year: 2020,
@@ -36,7 +36,7 @@ class ModeData{
                            color: "Orange",
                            numberOfOwners: 1,
                            isFavorite: false),
-                       Car(images: [Image("toyota")],
+                       Car(images: ["toyota"],
                            mark: "Toyota",
                            model: "Kerry",
                            year: 2018,
