@@ -45,5 +45,9 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = CarDetailsViewController()
+        vc.car = ModeData.shared.cars[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
