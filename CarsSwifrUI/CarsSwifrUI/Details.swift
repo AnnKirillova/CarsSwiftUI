@@ -29,27 +29,21 @@ struct Details: View {
                 Text("/ \(car.price * 28) uah")
                 Spacer()
             }.padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
-            
+            HStack{
+                
             VStack(alignment: .leading) {
                 Text("Color: \(car.color)")
                 Text("Number of owners: \(car.numberOfOwners)")
             }
+            }
         }
+        .navigationTitle(car.mark)
+                .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct Details_Previews: PreviewProvider {
     static var previews: some View {
-        Details(car: Car(images: [Image("Mercedes-1")],
-                         mark: "Ford",
-                         model: "Mustang",
-                         year: 2021,
-                         price: 17000,
-                         fuel: .benzine,
-                         road: 9,
-                         location: "Kyiv",
-                         transmission: .auto,
-                         color: "White",
-                         numberOfOwners: 3))
+        Details(car: ModeData.shared.cars.first!)
     }
 }

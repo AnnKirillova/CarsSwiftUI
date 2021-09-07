@@ -22,6 +22,7 @@ struct Car: Identifiable{
     let transmission: Transmission
     let color: String
     let numberOfOwners: Int
+    let isFavorite: Bool
 }
 
 enum Fuel: String {

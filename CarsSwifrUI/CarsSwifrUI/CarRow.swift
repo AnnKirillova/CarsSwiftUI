@@ -37,7 +37,7 @@ struct CarRow: View {
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(.red)
                             .frame(width: 25, height: 25)
                         
                         Text(" \(car.road) тис. км")
@@ -48,7 +48,7 @@ struct CarRow: View {
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color.red)
                             .frame(width: 25, height: 25)
                         
                         Text(car.fuel.rawValue)
@@ -63,7 +63,7 @@ struct CarRow: View {
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color.red)
                             .frame(width: 25, height: 25)
                         
                         Text(" \(car.location)")
@@ -74,14 +74,12 @@ struct CarRow: View {
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color.orange)
+                            .foregroundColor(Color.red)
                             .frame(width: 25, height: 25)
                         
                         Text(car.transmission.rawValue)
-                        
                     }
                 }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
-                
             }
         }
     }
@@ -89,16 +87,6 @@ struct CarRow: View {
 
 struct CarRow_Previews: PreviewProvider {
     static var previews: some View {
-        CarRow(car: Car(images: [Image("Mercedes-1")],
-                        mark: "Ford",
-                        model: "Mustang",
-                        year: 2021,
-                        price: 17000,
-                        fuel: .benzine,
-                        road: 9,
-                        location: "Kyiv",
-                        transmission: .auto,
-                        color: "White",
-                        numberOfOwners: 3))
+        CarRow(car: ModeData.shared.cars.first!)
     }
 }
