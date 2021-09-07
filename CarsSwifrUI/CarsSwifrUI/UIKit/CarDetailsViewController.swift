@@ -29,5 +29,6 @@ class CarDetailsViewController: UIViewController {
         uanCost.text = "/\(car.price * 28) uan"
         color.text = "Color: \(car.color)"
         numberOfOwner.text = "Number of owners: \(car.numberOfOwners)"
+        self.title = "\(car.mark)"
     }
 }
