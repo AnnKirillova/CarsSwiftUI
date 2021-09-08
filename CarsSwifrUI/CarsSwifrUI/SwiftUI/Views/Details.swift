@@ -12,11 +12,12 @@ struct Details: View {
     var car: Car
     var body: some View {
         VStack {
-            Image(car.icon!)
+            GeometryReader { geo  in
+                Image(car.icon!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            
+                .frame(width: geo.size.width, height: geo.size.height * 0.7, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }.frame()
             HStack {
                 Text("\(car.mark) \(car.model) \(String(car.year))")
                 Spacer()
