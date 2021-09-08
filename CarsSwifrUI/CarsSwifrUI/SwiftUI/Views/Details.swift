@@ -33,7 +33,7 @@ struct Details: View {
             VStack(alignment: .leading) {
                 Text("Color: \(car.color)")
                 Text("Number of owners: \(car.numberOfOwners)")
-                Button("Push") {
+                Button("Change price") {
                     car.price = Int(price) ?? car.price
                 }
             }
