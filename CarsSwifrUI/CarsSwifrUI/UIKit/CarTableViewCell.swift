@@ -7,8 +7,9 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CarTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titelView: NameAndPriceView!
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var nameOfCar: UILabel!
     @IBOutlet weak var basicCost: UILabel!
@@ -25,13 +26,11 @@ class TableViewCell: UITableViewCell {
     
     func set(car: Car){
         carImage.image = UIImage(named: car.icon!)
-        nameOfCar.text = "\(car.mark) \(car.model) \(car.year)"
-        basicCost.text = "\(car.price)$"
-        uanCost.text = "/\(car.price * 28) uan"
         speed.text = "\(car.road)"
         fuel.text = "\(car.fuel.rawValue)"
         location.text = "\(car.location)"
         transmission.text = "\(car.transmission.rawValue)"
+        titelView.set(car: car)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

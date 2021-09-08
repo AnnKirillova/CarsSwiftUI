@@ -20,7 +20,7 @@ struct UIKitDetails: UIViewControllerRepresentable {
 
 class CarViewController: UIViewController {
     @IBOutlet weak var tableWithCars: UITableView!
-    let tableViewCell = "TableViewCell"
+    let tableViewCell = "CarTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCell, for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCell, for: indexPath) as! CarTableViewCell
         cell.set(car: ModeData.shared.cars[indexPath.row])
         return cell
     }
