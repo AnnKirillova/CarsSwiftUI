@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarDetailsViewController" customModule="CarsSwifrUI" customModuleProvider="target">
             <connections>
-                <outlet property="basicCost" destination="fDD-mk-s9Q" id="Uwq-Le-Z3u"/>
+                <outlet property="basicCost" destination="4LC-6G-Ave" id="UnH-W5-tMg"/>
                 <outlet property="carImage" destination="Lgd-Rz-7cN" id="2oH-no-JAK"/>
                 <outlet property="color" destination="zia-j2-a5n" id="8Sy-zW-8fJ"/>
                 <outlet property="nameOfCar" destination="duB-il-HAF" id="y4i-dQ-Qg1"/>
@@ -36,12 +36,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost  $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDD-mk-s9Q">
-                    <rect key="frame" x="20" y="398" width="66" height="26"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <color key="textColor" systemColor="systemGreenColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ cost in uan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-G9-kic">
                     <rect key="frame" x="96" y="400.5" width="92" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -60,22 +54,39 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4LC-6G-Ave">
+                    <rect key="frame" x="4" y="394" width="90" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="vDp-sY-Lsn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-mY-kAM">
+                    <rect key="frame" x="149.5" y="822" width="115" height="30"/>
+                    <state key="normal" title="Назначить цену"/>
+                    <connections>
+                        <action selector="priceActionButton:" destination="-1" eventType="touchUpInside" id="2Ci-Fz-kiW"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="uCh-mY-kAM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2gP-eC-bSJ"/>
+                <constraint firstItem="4LC-6G-Ave" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="4" id="7zt-d9-GMK"/>
                 <constraint firstItem="duB-il-HAF" firstAttribute="top" secondItem="Lgd-Rz-7cN" secondAttribute="bottom" constant="20" id="BWI-hX-69X"/>
-                <constraint firstItem="QXT-G9-kic" firstAttribute="centerY" secondItem="fDD-mk-s9Q" secondAttribute="centerY" id="G8x-hg-z37"/>
+                <constraint firstItem="4LC-6G-Ave" firstAttribute="top" secondItem="duB-il-HAF" secondAttribute="bottom" constant="6" id="Ezu-HA-gGQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uCh-mY-kAM" secondAttribute="bottom" constant="10" id="IaQ-I9-bQt"/>
+                <constraint firstItem="QXT-G9-kic" firstAttribute="centerY" secondItem="4LC-6G-Ave" secondAttribute="centerY" id="VYm-iF-uhm"/>
+                <constraint firstItem="QXT-G9-kic" firstAttribute="leading" secondItem="4LC-6G-Ave" secondAttribute="trailing" constant="2" id="bRO-w8-CzA"/>
                 <constraint firstItem="Lgd-Rz-7cN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="90" id="eRS-vI-mDc"/>
                 <constraint firstItem="Lgd-Rz-7cN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eZD-3T-Wk7"/>
-                <constraint firstItem="fDD-mk-s9Q" firstAttribute="top" secondItem="duB-il-HAF" secondAttribute="bottom" constant="10" id="huc-xl-3u8"/>
                 <constraint firstItem="9uh-vp-Uff" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="120" id="khN-f7-ssd"/>
-                <constraint firstItem="QXT-G9-kic" firstAttribute="leading" secondItem="fDD-mk-s9Q" secondAttribute="trailing" constant="10" id="p1E-Ho-bbS"/>
                 <constraint firstItem="zia-j2-a5n" firstAttribute="top" secondItem="QXT-G9-kic" secondAttribute="bottom" constant="25" id="qLP-mp-ATx"/>
                 <constraint firstItem="duB-il-HAF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vXv-Zv-oqJ"/>
                 <constraint firstItem="Lgd-Rz-7cN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w80-Vk-8B8"/>
                 <constraint firstItem="zia-j2-a5n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="120" id="wTk-8k-Zn3"/>
-                <constraint firstItem="fDD-mk-s9Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ws3-Lq-DTU"/>
                 <constraint firstItem="9uh-vp-Uff" firstAttribute="top" secondItem="zia-j2-a5n" secondAttribute="bottom" constant="10" id="zcE-lA-WdM"/>
             </constraints>
             <point key="canvasLocation" x="111.59420289855073" y="84.375"/>
@@ -84,9 +95,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

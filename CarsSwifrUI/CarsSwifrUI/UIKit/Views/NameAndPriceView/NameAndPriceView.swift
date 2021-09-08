@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameAndPriceView: UIView {
+class NameAndPriceView: UIView, PriceDelegate {
     
     @IBOutlet weak var nameOfCar: UILabel!
     @IBOutlet weak var basicPrice: UILabel!
@@ -33,5 +33,9 @@ class NameAndPriceView: UIView {
         nameOfCar.text = car.mark + car.model + "\(car.year)"
         basicPrice.text = "\(car.price)$"
         priceInUan.text = "/\(car.price * 28) uan"
+    }
+    
+    func addPrice(newPrice: String) {
+        nameOfCar.text = newPrice
     }
 }
