@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CarRow: View {
-    let car: Car
+    @ObservedObject var car: Car
     var body: some View {
         VStack {
             Image(car.icon!)

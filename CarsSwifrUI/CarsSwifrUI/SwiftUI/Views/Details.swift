@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Details: View {
+    @State var price: String = ""
     var car: Car
     var body: some View {
         VStack {
@@ -22,10 +23,7 @@ struct Details: View {
             }.padding(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5))
             
             HStack{
-                Text("\(car.price) $")
-                    .font(Font.system(size: 21))
-                    .fontWeight(.bold)
-                    .foregroundColor(.green)
+                TextField("Enter price", text: $price)
                 Text("/ \(car.price * 28) uah")
                 Spacer()
             }.padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
@@ -34,6 +32,9 @@ struct Details: View {
             VStack(alignment: .leading) {
                 Text("Color: \(car.color)")
                 Text("Number of owners: \(car.numberOfOwners)")
+                Button("Push") {
+                    car.price = Int(price) ?? car.price
+                }
             }
             }
         }

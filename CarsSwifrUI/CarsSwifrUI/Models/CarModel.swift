@@ -8,14 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Car: Identifiable{
+class Car: Identifiable, ObservableObject{
+    
     var id: String = UUID().uuidString
     
     let images: [String]
     let mark: String
     let model: String
     let year: Int
-    var price: Int
+    @Published var price: Int
     let fuel: Fuel
     let road: Int
     let location: String
@@ -26,6 +27,32 @@ struct Car: Identifiable{
     
     var icon: String? {
         return images.first
+    }
+    
+    init(images: [String],
+                  mark: String,
+                  model: String,
+                  year: Int,
+                  price: Int,
+                  fuel: Fuel,
+                  road: Int,
+                  location: String,
+                  transmission: Transmission,
+                  color: String,
+                  numberOfOwners: Int,
+                  isFavorite: Bool) {
+        self.images = images
+        self.mark = mark
+        self.model = model
+        self.year = year
+        self.price = price
+        self.fuel = fuel
+        self.road = road
+        self.location = location
+        self.transmission = transmission
+        self.color = color
+        self.numberOfOwners = numberOfOwners
+        self.isFavorite = isFavorite
     }
 }
 
