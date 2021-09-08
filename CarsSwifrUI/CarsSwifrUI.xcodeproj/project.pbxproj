@@ -24,6 +24,7 @@
 		9590EEDE26E7AED9009627BE /* CarDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9590EEDC26E7AED9009627BE /* CarDetailsViewController.xib */; };
 		9599C42326E8E24500322931 /* NameAndPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599C42226E8E24500322931 /* NameAndPriceView.swift */; };
 		9599C42526E8E2CA00322931 /* NameAndPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9599C42426E8E2CA00322931 /* NameAndPriceView.xib */; };
+		9599C42E26E8F31B00322931 /* SwiftUIAndUIKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599C42D26E8F31B00322931 /* SwiftUIAndUIKitHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9590EEDC26E7AED9009627BE /* CarDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailsViewController.xib; sourceTree = "<group>"; };
 		9599C42226E8E24500322931 /* NameAndPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndPriceView.swift; sourceTree = "<group>"; };
 		9599C42426E8E2CA00322931 /* NameAndPriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameAndPriceView.xib; sourceTree = "<group>"; };
+		9599C42D26E8F31B00322931 /* SwiftUIAndUIKitHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAndUIKitHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,16 +130,73 @@
 		9590EED826E794A5009627BE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9599C42B26E8F2CF00322931 /* Cells */,
+				9599C42926E8F2B200322931 /* Views */,
+				9599C42626E8F27700322931 /* ViewControllers */,
+				9599C42D26E8F31B00322931 /* SwiftUIAndUIKitHelpers.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9599C42626E8F27700322931 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9599C42826E8F2A200322931 /* CarDetailsViewController */,
+				9599C42726E8F29300322931 /* CarViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9599C42726E8F29300322931 /* CarViewController */ = {
+			isa = PBXGroup;
+			children = (
 				9590EECD26E78D61009627BE /* CarViewController.swift */,
 				9590EECE26E78D61009627BE /* CarViewController.xib */,
-				9590EED126E78DE5009627BE /* CarTableViewCell.swift */,
-				9599C42226E8E24500322931 /* NameAndPriceView.swift */,
-				9599C42426E8E2CA00322931 /* NameAndPriceView.xib */,
-				9590EED226E78DE5009627BE /* CarTableViewCell.xib */,
+			);
+			path = CarViewController;
+			sourceTree = "<group>";
+		};
+		9599C42826E8F2A200322931 /* CarDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
 				9590EEDB26E7AED9009627BE /* CarDetailsViewController.swift */,
 				9590EEDC26E7AED9009627BE /* CarDetailsViewController.xib */,
 			);
-			path = UIKit;
+			path = CarDetailsViewController;
+			sourceTree = "<group>";
+		};
+		9599C42926E8F2B200322931 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9599C42A26E8F2C100322931 /* NameAndPriceView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9599C42A26E8F2C100322931 /* NameAndPriceView */ = {
+			isa = PBXGroup;
+			children = (
+				9599C42426E8E2CA00322931 /* NameAndPriceView.xib */,
+				9599C42226E8E24500322931 /* NameAndPriceView.swift */,
+			);
+			path = NameAndPriceView;
+			sourceTree = "<group>";
+		};
+		9599C42B26E8F2CF00322931 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9599C42C26E8F2D900322931 /* CarTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9599C42C26E8F2D900322931 /* CarTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9590EED126E78DE5009627BE /* CarTableViewCell.swift */,
+				9590EED226E78DE5009627BE /* CarTableViewCell.xib */,
+			);
+			path = CarTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +274,7 @@
 			files = (
 				9590EECF26E78D61009627BE /* CarViewController.swift in Sources */,
 				95169F6F26E65D98005B3239 /* SearchView.swift in Sources */,
+				9599C42E26E8F31B00322931 /* SwiftUIAndUIKitHelpers.swift in Sources */,
 				95169F6D26E650B9005B3239 /* CarModel.swift in Sources */,
 				95169F7126E664B2005B3239 /* Details.swift in Sources */,
 				9590EED326E78DE5009627BE /* CarTableViewCell.swift in Sources */,

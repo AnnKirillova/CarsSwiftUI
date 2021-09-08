@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PriceDelegate: class{
+protocol PriceDelegate: AnyObject{
     func addPrice(newPrice: String)
 }
 

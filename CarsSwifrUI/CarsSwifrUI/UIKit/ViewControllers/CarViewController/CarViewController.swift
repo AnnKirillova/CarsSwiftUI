@@ -8,16 +8,6 @@
 import UIKit
 import SwiftUI
 
-struct UIKitDetails: UIViewControllerRepresentable {
-    func makeUIViewController(context: UIViewControllerRepresentableContext<UIKitDetails>) -> UIViewController {
-        let viewController = CarViewController()
-        return viewController
-    }
-    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<UIKitDetails>) {
-        // pass
-    }
-}
-
 class CarViewController: UIViewController {
     @IBOutlet weak var tableWithCars: UITableView!
     let tableViewCell = "CarTableViewCell"
@@ -48,6 +38,8 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CarDetailsViewController()
         vc.car = ModeData.shared.cars[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! CarTableViewCell
+        vc.delegate = cell.titelView
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

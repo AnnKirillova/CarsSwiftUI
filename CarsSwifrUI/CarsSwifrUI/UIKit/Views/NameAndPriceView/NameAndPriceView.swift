@@ -36,6 +36,7 @@ class NameAndPriceView: UIView, PriceDelegate {
     }
     
     func addPrice(newPrice: String) {
-        nameOfCar.text = newPrice
+        basicPrice.text = newPrice + "$"
+        priceInUan.text = "\((Int(newPrice) ?? 0) * 28) uan"
     }
 }

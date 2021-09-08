@@ -15,7 +15,7 @@ struct Car: Identifiable{
     let mark: String
     let model: String
     let year: Int
-    let price: Int
+    var price: Int
     let fuel: Fuel
     let road: Int
     let location: String

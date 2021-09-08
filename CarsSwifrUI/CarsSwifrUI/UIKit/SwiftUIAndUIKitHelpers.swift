@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
+
+struct UIKitDetails: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<UIKitDetails>) -> UIViewController {
+        let viewController = CarViewController()
+        return viewController
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<UIKitDetails>) {
+        // pass
+    }
+}
