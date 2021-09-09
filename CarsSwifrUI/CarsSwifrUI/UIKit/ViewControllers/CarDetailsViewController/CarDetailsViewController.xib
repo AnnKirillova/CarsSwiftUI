@@ -13,8 +13,10 @@
                 <outlet property="basicCost" destination="4LC-6G-Ave" id="UnH-W5-tMg"/>
                 <outlet property="carImage" destination="Lgd-Rz-7cN" id="2oH-no-JAK"/>
                 <outlet property="color" destination="zia-j2-a5n" id="8Sy-zW-8fJ"/>
+                <outlet property="contentScrollView" destination="HgJ-9T-w0B" id="vzj-ZF-ZpJ"/>
                 <outlet property="nameOfCar" destination="duB-il-HAF" id="y4i-dQ-Qg1"/>
                 <outlet property="numberOfOwner" destination="9uh-vp-Uff" id="AWh-Xl-076"/>
+                <outlet property="scrollViewTopConstraint" destination="G6i-Hc-ADJ" id="Qh4-YW-iYs"/>
                 <outlet property="uanCost" destination="QXT-G9-kic" id="NhD-Lc-acg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,6 +34,7 @@
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-Rz-7cN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="572.5"/>
+                                    <gestureRecognizers/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Of Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duB-il-HAF">
                                     <rect key="frame" x="20" y="592.5" width="114" height="24"/>
