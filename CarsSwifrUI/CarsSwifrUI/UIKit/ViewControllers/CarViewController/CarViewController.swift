@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class CarViewController: UIViewController {
     @IBOutlet weak var tableWithCars: UITableView!
@@ -36,10 +35,16 @@ extension CarViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CarDetailsViewController()
-        vc.car = ModeData.shared.cars[indexPath.row]
-        let cell = tableView.cellForRow(at: indexPath) as! CarTableViewCell
-        vc.delegate = cell.titelView
-        self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.row == 0{
+            let vc = CarDetailsDiff()
+            vc.car = ModeData.shared.cars[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else{
+            let vc = CarDetailsViewController()
+            vc.car = ModeData.shared.cars[indexPath.row]
+            let cell = tableView.cellForRow(at: indexPath) as! CarTableViewCell
+            vc.delegate = cell.titelView
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
