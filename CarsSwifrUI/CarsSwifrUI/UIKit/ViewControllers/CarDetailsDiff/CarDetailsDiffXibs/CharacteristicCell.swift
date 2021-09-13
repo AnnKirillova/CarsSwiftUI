@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacteristicCell: UITableViewCell {
+class CharacteristicCell: UITableViewCell, DiffCell{
 
     @IBOutlet weak var color: UILabel!
     @IBOutlet weak var numOfOwners: UILabel!
@@ -18,5 +18,10 @@ class CharacteristicCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func set(car: Car){
+        color.text = "\(car.color)"
+        numOfOwners.text = "\(car.numberOfOwners)"
     }
 }

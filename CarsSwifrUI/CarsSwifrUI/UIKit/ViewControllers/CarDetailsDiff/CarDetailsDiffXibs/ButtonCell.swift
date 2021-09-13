@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ButtonCell: UITableViewCell{
+protocol CarPriceDelegate: AnyObject{
+    func changePrice()
+}
 
+class ButtonCell: UITableViewCell, DiffCell{
+    weak var delegate: CarPriceDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -18,6 +22,9 @@ class ButtonCell: UITableViewCell{
     }
     
     @IBAction func changePriceActionButton(_ sender: UIButton) {
+        delegate?.changePrice()
     }
     
+    func set(car: Car) {
+    }
 }

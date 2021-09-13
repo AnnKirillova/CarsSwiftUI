@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CarDetailsDiff: UIViewController{
+class CarDetailsDiff: UIViewController, CarPriceDelegate{
     
     var car: Car?
     private lazy var customTableView = UITableView()
@@ -39,23 +39,19 @@ class CarDetailsDiff: UIViewController{
     
     func setupDataSource() -> UITableViewDiffableDataSource<Section, CarDetailsDiffable>{
         return UITableViewDiffableDataSource(tableView: customTableView) { tableView, indexPath, data in
-            switch data{
-            case .carPhotoCell:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CarPhotoCell", for: indexPath)
-                return cell
-            case .nameAndPriceCell:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "NameAndPriceCell", for: indexPath)
-                return cell
-            case .characteristicCell:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicCell", for: indexPath)
-                return cell
-            case .buttonCell:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath)
-                return cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: data.rawValue, for: indexPath) as? DiffCell else {return UITableViewCell()}
+            if let car = self.car{
+                cell.set(car: car)
             }
+            if let cell = cell as? ButtonCell{
+                cell.delegate = self
+            }
+            return cell
         }
     }
-    
+    func changePrice() {
+        self.view.endEditing(true)
+    }
 }
 
 struct Section: Hashable{

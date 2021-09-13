@@ -7,7 +7,11 @@
 
 import UIKit
 
-class CarPhotoCell: UITableViewCell{
+protocol DiffCell: UITableViewCell{
+    func set(car: Car)
+}
+
+class CarPhotoCell: UITableViewCell, DiffCell{
 
     @IBOutlet weak var carPhoto: UIImageView!
     var car: Car?
@@ -17,5 +21,9 @@ class CarPhotoCell: UITableViewCell{
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func set(car: Car){
+        carPhoto.image = UIImage(named: car.icon!)
     }
 }

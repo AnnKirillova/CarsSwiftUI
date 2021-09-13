@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameAndPriceView: UIView, PriceDelegate {
+class NameAndPriceView: UIView, PriceDelegate, CarPriceDelegate {
     
     @IBOutlet weak var nameOfCar: UILabel!
     @IBOutlet weak var basicPrice: UILabel!
@@ -38,5 +38,10 @@ class NameAndPriceView: UIView, PriceDelegate {
     func addPrice(newPrice: String) {
         basicPrice.text = newPrice + "$"
         priceInUan.text = "\((Int(newPrice) ?? 0) * 28) uan"
+    }
+    
+    func changePrice() {
+//        basicPrice.text =  + "$"
+//        priceInUan.text = "\((Int(newPrice) ?? 0) * 28) uan"
     }
 }
