@@ -11,13 +11,12 @@ class CarTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titelView: NameAndPriceView!
     @IBOutlet weak var carImage: UIImageView!
-    @IBOutlet weak var nameOfCar: UILabel!
-    @IBOutlet weak var basicCost: UILabel!
-    @IBOutlet weak var uanCost: UILabel!
     @IBOutlet weak var speed: UILabel!
     @IBOutlet weak var fuel: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var transmission: UILabel!
+    
+    private(set) var car: Car?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +24,7 @@ class CarTableViewCell: UITableViewCell {
     }
     
     func set(car: Car){
+        self.car = car
         carImage.image = UIImage(named: car.icon!)
         speed.text = "\(car.road)"
         fuel.text = "\(car.fuel.rawValue)"
